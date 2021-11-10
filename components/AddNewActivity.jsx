@@ -12,7 +12,7 @@ const AddNewActivity = ({ date, onSubmit, isLoading, clear }) => {
       <div className="flex flex-col">
         <p className="font-semibold text-4xl mb-2 ">{date.data.number} Feb</p>
         {date?.data?.activities.map((activity) => (
-          <p className="text-xl" key={activity.id}>
+          <p className="text-2xl" key={activity.id}>
             {activity.name}
           </p>
         ))}
