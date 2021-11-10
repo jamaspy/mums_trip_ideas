@@ -1,6 +1,7 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { GiKangaroo } from "react-icons/gi";
+import { IoIosAddCircleOutline } from "react-icons/io";
 const AddNewActivity = ({ date, onSubmit, isLoading, clear }) => {
   const [newActivity, setNewActivity] = React.useState(clear);
 
@@ -20,7 +21,8 @@ const AddNewActivity = ({ date, onSubmit, isLoading, clear }) => {
       <div className="flex flex-col bg-gray-400 rounded-md p-2 mt-4 ">
         <p className="text-xl mb-4">Add New Activity Idea</p>
         <input
-          className="rounded mb-2"
+          placeholder="Type your idea here"
+          className="rounded mb-2 p-1"
           value={newActivity}
           onChange={(e) => setNewActivity(e.target.value)}
         />
@@ -43,7 +45,10 @@ const AddNewActivity = ({ date, onSubmit, isLoading, clear }) => {
               <GiKangaroo className="animate-bounce text-center " />
             </div>
           ) : (
-            "Add Activity"
+            <div className="w-full flex flex-row items-center justify-center">
+              <IoIosAddCircleOutline />
+              <p className="ml-2">Add Activity Idea</p>
+            </div>
           )}
         </button>
       </div>
