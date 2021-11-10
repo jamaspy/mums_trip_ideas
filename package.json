@@ -3,10 +3,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest --watch",
+    "test:ci": "jest --ci"
   },
   "dependencies": {
     "@fontsource/caveat": "^4.5.0",
+    "@testing-library/user-event": "13.2.1",
+    "eslint": "7.32.0",
+    "eslint-config-next": "latest",
+    "eslint-plugin-testing-library": "4.11.0",
     "faunadb": "^4.4.1",
     "next": "latest",
     "react": "^17.0.2",
@@ -16,8 +22,14 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
     "autoprefixer": "^10.2.6",
+    "babel-jest": "^27.3.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.3.1",
     "postcss": "^8.3.5",
+    "react-test-renderer": "^17.0.2",
     "tailwindcss": "^2.2.4"
   }
 }
