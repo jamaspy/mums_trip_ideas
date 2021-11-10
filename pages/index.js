@@ -7,8 +7,8 @@ import {
   useQuery,
   useMutation,
 } from "react-query";
-import { getAllDates } from "../api/getAllDates";
-import { createNewActivity } from "../api/createNewActivity";
+import { getAllDates } from "../utils/getAllDates";
+import { createNewActivity } from "../utils/createNewActivity";
 import AddNewActivity from "../components/AddNewActivity";
 export async function getStaticProps() {
   const queryClient = new QueryClient();
