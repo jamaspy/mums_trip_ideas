@@ -27,7 +27,7 @@ const AddNewActivity = ({ date, onSubmit, isLoading, clear }) => {
           onChange={(e) => setNewActivity(e.target.value)}
         />
         <button
-          disabled={isLoading}
+          disabled={isLoading || !newActivity}
           onClick={() => {
             const data = {
               act: newActivity,
